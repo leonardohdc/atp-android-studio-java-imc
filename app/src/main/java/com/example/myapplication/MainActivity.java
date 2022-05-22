@@ -3,13 +3,10 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ToggleButton;
-
-import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,9 +54,8 @@ public class MainActivity extends AppCompatActivity {
     public void botaoCalcularIMC(View v){
         float peso = Float.parseFloat(campoPeso.getText().toString());
         float altura = Float.parseFloat(campoAltura.getText().toString())/100;
-
         float imc = peso/(altura*altura);
-        Log.d("MyApp","o imc é: " + imc);
+
         if(imc < 18.5){
             resultadoIMC.setText("Magreza");
         } else if(18.5 < imc && imc < 24.9) {
