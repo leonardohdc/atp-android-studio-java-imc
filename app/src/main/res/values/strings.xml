@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">ATP Mobile</string>
+    <string name="sexo">Sexo</string>
+    <string name="idade">Idade</string>
+    <string name="altura">Altura</string>
+    <string name="kg">KG</string>
+    <string name="cm">CM</string>
+    <string name="insira_seu_peso">Insira seu peso</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="homem">Homem</string>
+    <string name="mulher">Mulher</string>
+    <string name="insira_sua_idade">Insira sua idade</string>
+    <string name="insira_sua_altura">Insira sua altura</string>
+    <string name="seu_imc"></string>
+    <string name="calcular">Calcular</string>
+    <string name="peso">Peso</string>
 </resources>

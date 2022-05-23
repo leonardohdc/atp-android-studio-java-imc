@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     EditText campoIdade;
     EditText campoPeso;
     EditText campoAltura;
+    TextView textoSeuIMC;
     TextView resultadoIMC;
     TextView resultadoIMCNumero;
 
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         campoIdade = findViewById((R.id.campoIdade));
         campoPeso = findViewById((R.id.campoPeso));
         campoAltura = findViewById((R.id.campoAltura));
+        textoSeuIMC = findViewById((R.id.textoSeuIMC));
 
         botaoMulher.setOnClickListener(new View.OnClickListener()
         {
@@ -56,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
         float altura = Float.parseFloat(campoAltura.getText().toString())/100;
         float imc = peso/(altura*altura);
 
+        resultadoIMC.setTypeface(null, Typeface.BOLD);
+        textoSeuIMC.setText("Seu IMC é:");
         if(imc < 18.5){
             resultadoIMC.setText("Magreza");
         } else if(18.5 < imc && imc < 24.9) {
@@ -66,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             resultadoIMC.setText("Obesidade");
         }
 
+        resultadoIMCNumero.setTypeface(null, Typeface.BOLD);
         resultadoIMCNumero.setText(String.format("%.2f", peso/(altura*altura)));
     }
 }
